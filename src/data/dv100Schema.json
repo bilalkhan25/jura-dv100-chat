@@ -1,0 +1,509 @@
+{
+  "court": {
+    "courtName": "",
+    "caseNumber": ""
+  },
+  "protectedPerson": {
+    "petitionerName": "",
+    "petitionerAge": "",
+    "petitionerAddress": "",
+    "petitionerCity": "",
+    "petitionerState": "",
+    "petitionerZip": "",
+    "petitionerPhone": "",
+    "petitionerFax": "",
+    "petitionerEmail": ""
+  },
+  "lawyer": {
+    "lawyerName": "",
+    "lawyerFirm": "",
+    "lawyerBarNumber": ""
+  },
+  "restrainedPerson": {
+    "respondentName": "",
+    "respondentAge": "",
+    "respondentDOB": "",
+    "respondentGenderMale": false,
+    "respondentGenderFemale": false,
+    "respondentGenderNonbinary": false,
+    "respondentRace": ""
+  },
+  "header": {
+    "caseNumber#1": ""
+  },
+
+  "relationship": {
+    "relationship_childCheckbox": false,
+    "relationship_childrenNames1": "",
+    "relationship_childrenNames2": "",
+    "relationship_married": false,
+    "relationship_usedToBeMarried": false,
+    "relationship_dating": false,
+    "relationship_engaged": false,
+    "relationship_related": false,
+
+    "relationship_parent": false,
+    "relationship_child": false,
+    "relationship_spouseOfChild": false,
+    "relationship_sibling": false,
+    "relationship_grandparent": false,
+    "relationship_grandchild": false,
+
+    "relationship_livedTogether": false,
+    "relationship_livedTogether_yes": false,
+    "relationship_livedTogether_no": false
+  },
+
+  "otherOrders": {
+    "otherOrders_none": false,
+    "otherOrders_yes": false,
+    "otherOrders1_dateFiled": "",
+    "otherOrders1_dateExpires": "",
+    "otherOrders2_dateFiled": "",
+    "otherOrders2_dateExpires": ""
+  },
+
+  "otherCases": {
+    "otherCases_none": false,
+    "otherCases_yes": false,
+    "otherCase_custody_checkbox": false,
+    "otherCase_custody": "",
+    "otherCase_divorce_checkbox": false,
+    "otherCase_divorce": "",
+    "otherCase_juvenile_checkbox": false,
+    "otherCase_juvenile": "",
+    "otherCase_guardianship_checkbox": false,
+    "otherCase_guardianship": "",
+    "otherCase_criminal_checkbox": false,
+    "otherCase_criminal": "",
+    "otherCase_other_checkbox": false,
+    "otherCase_otherKind": "",
+    "otherCase_otherDetails": ""
+  },
+  "header_page3": {
+    "caseNumber#2": ""
+  },
+
+  "abuse": {
+    "abuse_date": "",
+
+    "abuse_witness_dontknow": false,
+    "abuse_witness_no": false,
+    "abuse_witness_yes": false,
+    "abuse_witness_yes_names": "",
+
+    "abuse_weapon_no": false,
+    "abuse_weapon_yes": false,
+    "abuse_weapon_yes_description": "",
+
+    "abuse_emotionalPhysical_no": false,
+    "abuse_emotionalPhysical_yes": false,
+    "abuse_emotionalPhysical_yes_description": "",
+
+    "abuse_police_dontknow": false,
+    "abuse_police_no": false,
+    "abuse_police_yes": false,
+
+    "abuse_details_description": "",
+
+    "abuse_frequency_justOnce": false,
+    "abuse_frequency_2to5": false,
+    "abuse_frequency_weekly": false,
+    "abuse_frequency_other": false,
+    "abuse_frequency_other_details": "",
+
+    "abuse_frequency_timeline": ""
+  },
+  "header_page4": {
+    "caseNumber#3": ""
+  },
+
+  "abuse_additional": {
+    "abuse_additional_date": "",
+
+    "abuse_additional_witness_dontknow": false,
+    "abuse_additional_witness_no": false,
+    "abuse_additional_witness_yes": false,
+    "abuse_additional_witness_yes_names": "",
+
+    "abuse_additional_weapon_no": false,
+    "abuse_additional_weapon_yes": false,
+    "abuse_additional_weapon_yes_description": "",
+
+    "abuse_additional_emotionalPhysical_no": false,
+    "abuse_additional_emotionalPhysical_yes": false,
+    "abuse_additional_emotionalPhysical_yes_description": "",
+
+    "abuse_additional_police_dontknow": false,
+    "abuse_additional_police_no": false,
+    "abuse_additional_police_yes": false,
+
+    "abuse_additional_details_description": "",
+
+    "abuse_additional_frequency_justOnce": false,
+    "abuse_additional_frequency_2to5": false,
+    "abuse_additional_frequency_weekly": false,
+    "abuse_additional_frequency_other": false,
+    "abuse_additional_frequency_other_details": "",
+
+    "abuse_frequency_timeline#1": ""
+  },
+  "header_page5": {
+    "caseNumber#4": ""
+  },
+
+  "abuse_more": {
+    "abuse_more_date": "",
+
+    "abuse_more_witness_dontknow": false,
+    "abuse_more_witness_no": false,
+    "abuse_more_witness_yes": false,
+    "abuse_more_witness_yes_names": "",
+
+    "abuse_more_weapon_no": false,
+    "abuse_more_weapon_yes": false,
+    "abuse_more_weapon_yes_description": "",
+
+    "abuse_more_emotionalPhysical_no": false,
+    "abuse_more_emotionalPhysical_yes": false,
+    "abuse_more_emotionalPhysical_yes_description": "",
+
+    "abuse_more_police_dontknow": false,
+    "abuse_more_police_no": false,
+    "abuse_more_police_yes": false,
+
+    "abuse_more_details_description": "",
+
+    "abuse_more_frequency_justOnce": false,
+    "abuse_more_frequency_2to5": false,
+    "abuse_more_frequency_weekly": false,
+    "abuse_more_frequency_other": false,
+    "abuse_more_frequency_other_details": "",
+    "abuse_more_frequency_timeline": "",
+
+    "abuse_more_useDV101_checkbox": false
+  },
+  "header_page6": {
+    "caseNumber#5": ""
+  },
+
+  "otherProtectedPeople": {
+    "protectedPeople_none": false,
+    "protectedPeople_yes": false,
+
+    "protected1_name": "",
+    "protected1_age": "",
+    "protected1_relationship": "",
+    "protected1_livesWith_yes": false,
+    "protected1_livesWith_no": false,
+
+    "protected2_name": "",
+    "protected2_age": "",
+    "protected2_relationship": "",
+    "protected2_livesWith_yes": false,
+    "protected2_livesWith_no": false,
+
+    "protected3_name": "",
+    "protected3_age": "",
+    "protected3_relationship": "",
+    "protected3_livesWith_yes": false,
+    "protected3_livesWith_no": false,
+
+    "protected4_name": "",
+    "protected4_age": "",
+    "protected4_relationship": "",
+    "protected4_livesWith_yes": false,
+    "protected4_livesWith_no": false,
+
+    "protectedPeople_additionalSheet_checkbox": false,
+    "protectedPeople_reason": ""
+  },
+
+  "firearms": {
+    "firearms_dontknow": false,
+    "firearms_no": false,
+    "firearms_yes": false,
+
+    "firearm1_description": "",
+    "firearm1_amount": "",
+    "firearm1_location": "",
+
+    "firearm2_description": "",
+    "firearm2_amount": "",
+    "firearm2_location": "",
+
+    "firearm3_description": "",
+    "firearm3_amount": "",
+    "firearm3_location": "",
+
+    "firearm4_description": "",
+    "firearm4_amount": "",
+    "firearm4_location": "",
+
+    "firearm5_description": "",
+    "firearm5_amount": "",
+    "firearm5_location": "",
+
+    "firearm6_description": "",
+    "firearm6_amount": "",
+    "firearm6_location": ""
+  },
+  "header_page7": {
+    "caseNumber#6": ""
+  },
+
+  "ordersRequested": {
+    "order_noAbuse_checkbox": false,
+
+    "order_noContact_checkbox": false,
+
+    "order_stayAway": false,
+    "order_stayAway_me": false,
+    "order_stayAway_home": false,
+    "order_stayAway_job": false,
+    "order_stayAway_vehicle": false,
+    "order_stayAway_school": false,
+    "order_stayAway_eachPersonIn8": false,
+    "order_stayAway_childrenSchool": false,
+    "order_stayAway_other": false,
+    "order_stayAway_other_description": "",
+
+    "order_stayAway_distance_100": false,
+    "order_stayAway_distance_other": false,
+    "order_stayAway_distance_other_yards": "",
+
+    "order_living_no": false,
+    "order_living_yes": false,
+
+    "order_living_together": false,
+    "order_living_sameBuilding": false,
+    "order_living_sameNeighborhood": false,
+    "order_living_other": false,
+    "order_living_other_description": "",
+
+    "order_sameWorkSchool_no": false,
+    "order_sameWorkSchool_yes": false,
+
+    "order_sameWorkSchool_work": false,
+    "order_sameWorkSchool_work_name": "",
+    "order_sameWorkSchool_school": false,
+    "order_sameWorkSchool_school_name": "",
+    "order_sameWorkSchool_other": false,
+    "order_sameWorkSchool_other_description": ""
+  },
+  "header_page8": {
+    "caseNumber#7": ""
+  },
+
+  "ordersRequested_page8": {
+    
+    "order_moveout_address_checkbox": false,
+    "order_moveout_address": "",
+
+    "order_moveout_rights_own": false,
+    "order_moveout_rights_lease": false,
+    "order_moveout_rights_liveWithKids": false,
+    "order_moveout_rights_livedHere": false,
+    "order_moveout_rights_livedHere_years": "",
+    "order_moveout_rights_livedHere_months": "",
+    "order_moveout_rights_payRent": false,
+    "order_moveout_rights_other": false,
+    "order_moveout_rights_other_description1": "",
+    "order_moveout_rights_other_description2": "",
+
+    "order_other_description_checkbox": false,
+    "order_other_description": "",
+
+    "order_childCustody_checkbox": false
+  },
+  "header_page9": {
+    "caseNumber#8": ""
+  },
+
+  "protectAnimals": {
+    
+    "protect_animals_checkbox": false,
+
+    "animal1_name": "",
+    "animal1_type": "",
+    "animal1_breed": "",
+    "animal1_color": "",
+
+    "animal2_name": "",
+    "animal2_type": "",
+    "animal2_breed": "",
+    "animal2_color": "",
+
+    "animal3_name": "",
+    "animal3_type": "",
+    "animal3_breed": "",
+    "animal3_color": "",
+
+    "animal4_name": "",
+    "animal4_type": "",
+    "animal4_breed": "",
+    "animal4_color": "",
+
+    "animal_order_stayAway_checkbox": false,
+    "animal_order_stayAway_100": false,
+    "animal_order_stayAway_other": false,
+    "animal_order_stayAway_other_yards": "",
+
+    "animal_order_noHarm_checkbox": false,
+
+    "animal_order_possession_checkbox": false,
+    "animal_reason_abuse_checkbox": false,
+    "animal_reason_caretaker_checkbox": false,
+    "animal_reason_purchased_checkbox": false,
+    "animal_reason_other_checkbox": false,
+    "animal_reason_other_description1": "",
+    "animal_reason_other_description2": ""
+  },
+
+  "propertyControl": {
+    "control_of_property_checkbox": false,
+    "property_request_description": "",
+    "property_request_reason": ""
+  },
+
+  "insuranceAndCommunications": {
+    "order_healthInsurance_checkbox": false,
+
+    "order_recordCommunications_checkbox": false
+  },
+  "header_page10": {
+    "caseNumber#9": ""
+  },
+
+  "propertyRestraint": {
+    "order_propertyRestraint_checkbox": false
+  },
+
+  "extendServe": {
+    
+    "order_extendServe_reason_checkbox": false,
+    "order_extendServe_reason": ""
+  },
+
+  "payDebts": {
+    
+    "pay_debts_checkbox": false,
+
+    "debt1_payTo": "",
+    "debt1_for": "",
+    "debt1_amount": "",
+    "debt1_dueDate": "",
+
+    "debt2_payTo": "",
+    "debt2_for": "",
+    "debt2_amount": "",
+    "debt2_dueDate": "",
+
+    "debt3_payTo": "",
+    "debt3_for": "",
+    "debt3_amount": "",
+    "debt3_dueDate": "",
+
+    "debt_reasonForRequest": "",
+
+    
+    "debt_finding_no": false,
+    "debt_finding_yes": false,
+
+    "debt_abuseLink_a1": false,
+    "debt_abuseLink_a2": false,
+    "debt_abuseLink_a3": false,
+
+    "debt_explainHowMade_no": false,
+    "debt_explainHowMade_yes": false,
+    "debt_explainHowMade": ""
+  },
+  "header_page11": {
+    "caseNumber#10": ""
+  },
+
+  "abuseExpenses": {
+    
+    "abuseExpense_checkbox": false,
+
+    "abuseExpense1_payTo": "",
+    "abuseExpense1_for": "",
+    "abuseExpense1_amount": "",
+
+    "abuseExpense2_payTo": "",
+    "abuseExpense2_for": "",
+    "abuseExpense2_amount": "",
+
+    "abuseExpense3_payTo": "",
+    "abuseExpense3_for": "",
+    "abuseExpense3_amount": "",
+
+    "abuseExpense4_payTo": "",
+    "abuseExpense4_for": "",
+    "abuseExpense4_amount": ""
+  },
+
+  "childSupport": {
+    
+    "childSupport_checkbox": false,
+    "childSupport_a_noOrder_checkbox": false,
+    "childSupport_b_changeOrder_checkbox": false,
+    "childSupport_c_welfare_checkbox": false
+  },
+
+  "spousalSupport": {
+    
+    "spousalSupport_checkbox": false
+  },
+
+  "lawyerFees": {
+    
+    "lawyerFees_checkbox": false
+  },
+  "header_page12": {
+    "caseNumber#11": ""
+  },
+
+  "battererProgram": {
+    "battererIntervention_checkbox": false
+  },
+
+  "transferPhone": {
+    "transferPhone_checkbox": false,
+
+    "transferPhone_a_mine_checkbox": false,
+    "transferPhone_a_child_checkbox": false,
+    "transferPhone_a_number": "",
+
+    "transferPhone_b_mine_checkbox": false,
+    "transferPhone_b_child_checkbox": false,
+    "transferPhone_b_number": "",
+
+    "transferPhone_c_mine_checkbox": false,
+    "transferPhone_c_child_checkbox": false,
+    "transferPhone_c_number": "",
+
+    "transferPhone_d_mine_checkbox": false,
+    "transferPhone_d_child_checkbox": false,
+    "transferPhone_d_number": ""
+  },
+  "header_page13": {
+    "caseNumber#12": ""
+  },
+
+  "attachments": {
+    "additionalPages_count": ""
+  },
+
+  "signature": {
+    "petitionerSign_date": "",
+    "petitionerSign_name": "",
+    "petitionerSign_signatureImg": ""
+  },
+
+  "lawyerSignature": {
+    "lawyerSign_date": "",
+    "lawyerSign_name": "",
+    "lawyerSign_signatureImg": ""
+  }
+}

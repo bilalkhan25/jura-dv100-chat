@@ -1,0 +1,431 @@
+{
+  "form": "DV-100",
+  "version": "2025-11-12",
+  "generator": "JuraFlow",
+  "steps": [
+    { "page": 1, "id": "courtName", "type": "text", "context": "court name for filing header", "required": true },
+    { "page": 1, "id": "caseNumber", "type": "text", "context": "court case number, if known; else blank and court will assign", "required": false },
+
+    { "page": 1, "id": "petitionerName", "type": "text", "context": "your full legal name for DV-100 item 1a", "required": true },
+    { "page": 1, "id": "petitionerAge", "type": "number", "context": "your age for DV-100 item 1b", "required": true },
+    { "page": 1, "id": "petitionerAddress", "type": "text", "context": "safe mailing address for court papers (PO Box or alternate ok)", "required": true },
+    { "page": 1, "id": "petitionerCity", "type": "text", "context": "mailing city", "required": true },
+    { "page": 1, "id": "petitionerState", "type": "text", "context": "mailing state (2-letter)", "required": true },
+    { "page": 1, "id": "petitionerZip", "type": "text", "context": "mailing ZIP/postal code", "required": true },
+    { "page": 1, "id": "petitionerPhone", "type": "text", "context": "safe phone (optional)", "required": false },
+    { "page": 1, "id": "petitionerFax", "type": "text", "context": "fax (optional)", "required": false },
+    { "page": 1, "id": "petitionerEmail", "type": "text", "context": "safe email (optional)", "required": false },
+
+    { "page": 1, "id": "lawyerName", "type": "text", "context": "lawyer name if you have one", "required": false },
+    { "page": 1, "id": "lawyerFirm", "type": "text", "context": "law firm name if any", "required": false },
+    { "page": 1, "id": "lawyerBarNumber", "type": "text", "context": "lawyer state bar number", "required": false },
+
+    { "page": 1, "id": "respondentName", "type": "text", "context": "full name of the person you need protection from (DV-100 item 2a)", "required": true },
+    { "page": 1, "id": "respondentAge", "type": "number", "context": "their age (estimate ok) (item 2b)", "required": false },
+    { "page": 1, "id": "respondentDOB", "type": "date", "context": "their date of birth if known (item 2c)", "required": false },
+    { "page": 1, "id": "respondentGenderMale", "type": "checkbox", "context": "gender male checkbox (item 2d)", "required": false },
+    { "page": 1, "id": "respondentGenderFemale", "type": "checkbox", "context": "gender female checkbox (item 2d)", "required": false },
+    { "page": 1, "id": "respondentGenderNonbinary", "type": "checkbox", "context": "gender nonbinary checkbox (item 2d)", "required": false },
+    { "page": 1, "id": "respondentRace", "type": "text", "context": "race if known (item 2e)", "required": false },
+
+    { "page": 2, "id": "caseNumber#1", "type": "text", "context": "page header case number (auto from caseNumber)", "required": false, "auto": true },
+
+    { "page": 2, "id": "relationship_childCheckbox", "type": "checkbox", "context": "DV-100 §3(a): check if you have a child/children together", "required": false },
+    { "page": 2, "id": "relationship_childrenNames1", "type": "text", "context": "child names line 1 if applicable", "required": false },
+    { "page": 2, "id": "relationship_childrenNames2", "type": "text", "context": "child names line 2 if applicable", "required": false },
+    { "page": 2, "id": "relationship_married", "type": "checkbox", "context": "§3(b) married/registered partners", "required": false },
+    { "page": 2, "id": "relationship_usedToBeMarried", "type": "checkbox", "context": "§3(c) formerly married/registered", "required": false },
+    { "page": 2, "id": "relationship_dating", "type": "checkbox", "context": "§3(d) dating/used to date", "required": false },
+    { "page": 2, "id": "relationship_engaged", "type": "checkbox", "context": "§3(e) engaged/used to be engaged", "required": false },
+    { "page": 2, "id": "relationship_related", "type": "checkbox", "context": "§3(f) related", "required": false },
+    { "page": 2, "id": "relationship_parent", "type": "checkbox", "context": "§3(f) parent or in-law", "required": false },
+    { "page": 2, "id": "relationship_child", "type": "checkbox", "context": "§3(f) child/stepchild/adopted child", "required": false },
+    { "page": 2, "id": "relationship_spouseOfChild", "type": "checkbox", "context": "§3(f) child's spouse", "required": false },
+    { "page": 2, "id": "relationship_sibling", "type": "checkbox", "context": "§3(f) sibling/stepsibling/in-law", "required": false },
+    { "page": 2, "id": "relationship_grandparent", "type": "checkbox", "context": "§3(f) grandparent/step/in-law", "required": false },
+    { "page": 2, "id": "relationship_grandchild", "type": "checkbox", "context": "§3(f) grandchild/step/in-law", "required": false },
+    { "page": 2, "id": "relationship_livedTogether", "type": "checkbox", "context": "§3(g) live together or used to", "required": false },
+    { "page": 2, "id": "relationship_livedTogether_yes", "type": "checkbox", "context": "§3(g) lived together as family/household = Yes", "required": false },
+    { "page": 2, "id": "relationship_livedTogether_no", "type": "checkbox", "context": "§3(g) lived together as family/household = No", "required": false },
+
+    { "page": 2, "id": "otherOrders_none", "type": "checkbox", "context": "§4(a) any restraining orders in last 6 months = No", "required": false },
+    { "page": 2, "id": "otherOrders_yes", "type": "checkbox", "context": "§4(a) restraining orders exist/expired = Yes", "required": false },
+    { "page": 2, "id": "otherOrders1_dateFiled", "type": "date", "context": "§4(a) order #1 filed date", "required": false },
+    { "page": 2, "id": "otherOrders1_dateExpires", "type": "date", "context": "§4(a) order #1 expiry date", "required": false },
+    { "page": 2, "id": "otherOrders2_dateFiled", "type": "date", "context": "§4(a) order #2 filed date", "required": false },
+    { "page": 2, "id": "otherOrders2_dateExpires", "type": "date", "context": "§4(a) order #2 expiry date", "required": false },
+
+    { "page": 2, "id": "otherCases_none", "type": "checkbox", "context": "§4(b) other court cases with respondent = No", "required": false },
+    { "page": 2, "id": "otherCases_yes", "type": "checkbox", "context": "§4(b) other court cases with respondent = Yes", "required": false },
+    { "page": 2, "id": "otherCase_custody_checkbox", "type": "checkbox", "context": "§4(b) custody case exists", "required": false },
+    { "page": 2, "id": "otherCase_custody", "type": "text", "context": "§4(b) custody case details (where/year/case#)", "required": false },
+    { "page": 2, "id": "otherCase_divorce_checkbox", "type": "checkbox", "context": "§4(b) divorce case exists", "required": false },
+    { "page": 2, "id": "otherCase_divorce", "type": "text", "context": "§4(b) divorce case details", "required": false },
+    { "page": 2, "id": "otherCase_juvenile_checkbox", "type": "checkbox", "context": "§4(b) juvenile case exists", "required": false },
+    { "page": 2, "id": "otherCase_juvenile", "type": "text", "context": "§4(b) juvenile case details", "required": false },
+    { "page": 2, "id": "otherCase_guardianship_checkbox", "type": "checkbox", "context": "§4(b) guardianship case exists", "required": false },
+    { "page": 2, "id": "otherCase_guardianship", "type": "text", "context": "§4(b) guardianship details", "required": false },
+    { "page": 2, "id": "otherCase_criminal_checkbox", "type": "checkbox", "context": "§4(b) criminal case exists", "required": false },
+    { "page": 2, "id": "otherCase_criminal", "type": "text", "context": "§4(b) criminal case details", "required": false },
+    { "page": 2, "id": "otherCase_other_checkbox", "type": "checkbox", "context": "§4(b) other case exists", "required": false },
+    { "page": 2, "id": "otherCase_otherKind", "type": "text", "context": "§4(b) type of other case", "required": false },
+    { "page": 2, "id": "otherCase_otherDetails", "type": "text", "context": "§4(b) other case details (where/year/case#)", "required": false },
+
+    { "page": 3, "id": "caseNumber#2", "type": "text", "context": "page header case number (auto from caseNumber)", "required": false, "auto": true },
+
+    { "page": 3, "id": "abuse_date", "type": "date", "context": "§5(a) most recent abuse date (estimate ok)", "required": true },
+    { "page": 3, "id": "abuse_witness_dontknow", "type": "checkbox", "context": "§5(b) witnesses: don't know", "required": false },
+    { "page": 3, "id": "abuse_witness_no", "type": "checkbox", "context": "§5(b) witnesses: no", "required": false },
+    { "page": 3, "id": "abuse_witness_yes", "type": "checkbox", "context": "§5(b) witnesses: yes", "required": false },
+    { "page": 3, "id": "abuse_witness_yes_names", "type": "text", "context": "§5(b) witness names (if yes)", "required": false },
+
+    { "page": 3, "id": "abuse_weapon_no", "type": "checkbox", "context": "§5(c) weapon used/threatened: no", "required": false },
+    { "page": 3, "id": "abuse_weapon_yes", "type": "checkbox", "context": "§5(c) weapon used/threatened: yes", "required": false },
+    { "page": 3, "id": "abuse_weapon_yes_description", "type": "text", "context": "§5(c) weapon description (if yes)", "required": false },
+
+    { "page": 3, "id": "abuse_emotionalPhysical_no", "type": "checkbox", "context": "§5(d) emotional/physical harm: no", "required": false },
+    { "page": 3, "id": "abuse_emotionalPhysical_yes", "type": "checkbox", "context": "§5(d) emotional/physical harm: yes", "required": false },
+    { "page": 3, "id": "abuse_emotionalPhysical_yes_description", "type": "text", "context": "§5(d) harm description", "required": false },
+
+    { "page": 3, "id": "abuse_police_dontknow", "type": "checkbox", "context": "§5(e) police came: don't know", "required": false },
+    { "page": 3, "id": "abuse_police_no", "type": "checkbox", "context": "§5(e) police came: no", "required": false },
+    { "page": 3, "id": "abuse_police_yes", "type": "checkbox", "context": "§5(e) police came: yes", "required": false },
+
+    { "page": 3, "id": "abuse_details_description", "type": "text", "context": "§5(f) details of what happened that day", "required": true },
+
+    { "page": 3, "id": "abuse_frequency_justOnce", "type": "checkbox", "context": "§5(g) how often: just once", "required": false },
+    { "page": 3, "id": "abuse_frequency_2to5", "type": "checkbox", "context": "§5(g) how often: 2–5 times", "required": false },
+    { "page": 3, "id": "abuse_frequency_weekly", "type": "checkbox", "context": "§5(g) how often: weekly", "required": false },
+    { "page": 3, "id": "abuse_frequency_other", "type": "checkbox", "context": "§5(g) how often: other", "required": false },
+    { "page": 3, "id": "abuse_frequency_other_details", "type": "text", "context": "§5(g) other frequency details", "required": false },
+    { "page": 3, "id": "abuse_frequency_timeline", "type": "text", "context": "§5(g) dates/estimates of when it happened", "required": false },
+
+    { "page": 4, "id": "caseNumber#3", "type": "text", "context": "page header case number (auto from caseNumber)", "required": false, "auto": true },
+
+    { "page": 4, "id": "abuse_additional_date", "type": "date", "context": "§6(a) other/different abuse date", "required": false },
+    { "page": 4, "id": "abuse_additional_witness_dontknow", "type": "checkbox", "context": "§6(b) witnesses: don't know", "required": false },
+    { "page": 4, "id": "abuse_additional_witness_no", "type": "checkbox", "context": "§6(b) witnesses: no", "required": false },
+    { "page": 4, "id": "abuse_additional_witness_yes", "type": "checkbox", "context": "§6(b) witnesses: yes", "required": false },
+    { "page": 4, "id": "abuse_additional_witness_yes_names", "type": "text", "context": "§6(b) witness names (if yes)", "required": false },
+
+    { "page": 4, "id": "abuse_additional_weapon_no", "type": "checkbox", "context": "§6(c) weapon: no", "required": false },
+    { "page": 4, "id": "abuse_additional_weapon_yes", "type": "checkbox", "context": "§6(c) weapon: yes", "required": false },
+    { "page": 4, "id": "abuse_additional_weapon_yes_description", "type": "text", "context": "§6(c) weapon description", "required": false },
+
+    { "page": 4, "id": "abuse_additional_emotionalPhysical_no", "type": "checkbox", "context": "§6(d) harm: no", "required": false },
+    { "page": 4, "id": "abuse_additional_emotionalPhysical_yes", "type": "checkbox", "context": "§6(d) harm: yes", "required": false },
+    { "page": 4, "id": "abuse_additional_emotionalPhysical_yes_description", "type": "text", "context": "§6(d) harm description", "required": false },
+
+    { "page": 4, "id": "abuse_additional_police_dontknow", "type": "checkbox", "context": "§6(e) police came: don't know", "required": false },
+    { "page": 4, "id": "abuse_additional_police_no", "type": "checkbox", "context": "§6(e) police came: no", "required": false },
+    { "page": 4, "id": "abuse_additional_police_yes", "type": "checkbox", "context": "§6(e) police came: yes", "required": false },
+
+    { "page": 4, "id": "abuse_additional_details_description", "type": "text", "context": "§6(f) details of what happened (other incident)", "required": false },
+
+    { "page": 4, "id": "abuse_additional_frequency_justOnce", "type": "checkbox", "context": "§6(g) frequency: just once", "required": false },
+    { "page": 4, "id": "abuse_additional_frequency_2to5", "type": "checkbox", "context": "§6(g) frequency: 2–5 times", "required": false },
+    { "page": 4, "id": "abuse_additional_frequency_weekly", "type": "checkbox", "context": "§6(g) frequency: weekly", "required": false },
+    { "page": 4, "id": "abuse_additional_frequency_other", "type": "checkbox", "context": "§6(g) frequency: other", "required": false },
+    { "page": 4, "id": "abuse_additional_frequency_other_details", "type": "text", "context": "§6(g) other frequency details", "required": false },
+
+    { "page": 4, "id": "abuse_frequency_timeline#1", "type": "text", "context": "§6(g) dates/estimates timeline (continuation)", "required": false },
+
+    { "page": 5, "id": "caseNumber#4", "type": "text", "context": "page header case number (auto)", "required": false, "auto": true },
+
+    { "page": 5, "id": "abuse_more_date", "type": "date", "context": "§7(a) other abuse date (page 5)", "required": false },
+
+    { "page": 5, "id": "abuse_more_witness_dontknow", "type": "checkbox", "context": "§7(b) witnesses: don't know", "required": false },
+    { "page": 5, "id": "abuse_more_witness_no", "type": "checkbox", "context": "§7(b) witnesses: no", "required": false },
+    { "page": 5, "id": "abuse_more_witness_yes", "type": "checkbox", "context": "§7(b) witnesses: yes", "required": false },
+    { "page": 5, "id": "abuse_more_witness_yes_names", "type": "text", "context": "§7(b) witness names", "required": false },
+
+    { "page": 5, "id": "abuse_more_weapon_no", "type": "checkbox", "context": "§7(c) weapon: no", "required": false },
+    { "page": 5, "id": "abuse_more_weapon_yes", "type": "checkbox", "context": "§7(c) weapon: yes", "required": false },
+    { "page": 5, "id": "abuse_more_weapon_yes_description", "type": "text", "context": "§7(c) weapon description", "required": false },
+
+    { "page": 5, "id": "abuse_more_emotionalPhysical_no", "type": "checkbox", "context": "§7(d) harm: no", "required": false },
+    { "page": 5, "id": "abuse_more_emotionalPhysical_yes", "type": "checkbox", "context": "§7(d) harm: yes", "required": false },
+    { "page": 5, "id": "abuse_more_emotionalPhysical_yes_description", "type": "text", "context": "§7(d) harm description", "required": false },
+
+    { "page": 5, "id": "abuse_more_police_dontknow", "type": "checkbox", "context": "§7(e) police came: don't know", "required": false },
+    { "page": 5, "id": "abuse_more_police_no", "type": "checkbox", "context": "§7(e) police came: no", "required": false },
+    { "page": 5, "id": "abuse_more_police_yes", "type": "checkbox", "context": "§7(e) police came: yes", "required": false },
+
+    { "page": 5, "id": "abuse_more_details_description", "type": "text", "context": "§7(f) details of this additional incident", "required": false },
+
+    { "page": 5, "id": "abuse_more_frequency_justOnce", "type": "checkbox", "context": "§7(g) frequency: just once", "required": false },
+    { "page": 5, "id": "abuse_more_frequency_2to5", "type": "checkbox", "context": "§7(g) frequency: 2–5 times", "required": false },
+    { "page": 5, "id": "abuse_more_frequency_weekly", "type": "checkbox", "context": "§7(g) frequency: weekly", "required": false },
+    { "page": 5, "id": "abuse_more_frequency_other", "type": "checkbox", "context": "§7(g) frequency: other", "required": false },
+    { "page": 5, "id": "abuse_more_frequency_other_details", "type": "text", "context": "§7(g) other frequency details", "required": false },
+    { "page": 5, "id": "abuse_more_frequency_timeline", "type": "text", "context": "§7(g) timeline details", "required": false },
+
+    { "page": 5, "id": "abuse_more_useDV101_checkbox", "type": "checkbox", "context": "check if more space needed (DV-101)", "required": false },
+
+    { "page": 6, "id": "caseNumber#5", "type": "text", "context": "page header case number (auto)", "required": false, "auto": true },
+
+    { "page": 6, "id": "protectedPeople_none", "type": "checkbox", "context": "§8 other protected people: No", "required": false },
+    { "page": 6, "id": "protectedPeople_yes", "type": "checkbox", "context": "§8 other protected people: Yes", "required": false },
+
+    { "page": 6, "id": "protected1_name", "type": "text", "context": "§8 name #1", "required": false },
+    { "page": 6, "id": "protected1_age", "type": "number", "context": "§8 age #1", "required": false },
+    { "page": 6, "id": "protected1_relationship", "type": "text", "context": "§8 relationship #1", "required": false },
+    { "page": 6, "id": "protected1_livesWith_yes", "type": "checkbox", "context": "§8 lives with you #1: yes", "required": false },
+    { "page": 6, "id": "protected1_livesWith_no", "type": "checkbox", "context": "§8 lives with you #1: no", "required": false },
+
+    { "page": 6, "id": "protected2_name", "type": "text", "context": "§8 name #2", "required": false },
+    { "page": 6, "id": "protected2_age", "type": "number", "context": "§8 age #2", "required": false },
+    { "page": 6, "id": "protected2_relationship", "type": "text", "context": "§8 relationship #2", "required": false },
+    { "page": 6, "id": "protected2_livesWith_yes", "type": "checkbox", "context": "§8 lives with you #2: yes", "required": false },
+    { "page": 6, "id": "protected2_livesWith_no", "type": "checkbox", "context": "§8 lives with you #2: no", "required": false },
+
+    { "page": 6, "id": "protected3_name", "type": "text", "context": "§8 name #3", "required": false },
+    { "page": 6, "id": "protected3_age", "type": "number", "context": "§8 age #3", "required": false },
+    { "page": 6, "id": "protected3_relationship", "type": "text", "context": "§8 relationship #3", "required": false },
+    { "page": 6, "id": "protected3_livesWith_yes", "type": "checkbox", "context": "§8 lives with you #3: yes", "required": false },
+    { "page": 6, "id": "protected3_livesWith_no", "type": "checkbox", "context": "§8 lives with you #3: no", "required": false },
+
+    { "page": 6, "id": "protected4_name", "type": "text", "context": "§8 name #4", "required": false },
+    { "page": 6, "id": "protected4_age", "type": "number", "context": "§8 age #4", "required": false },
+    { "page": 6, "id": "protected4_relationship", "type": "text", "context": "§8 relationship #4", "required": false },
+    { "page": 6, "id": "protected4_livesWith_yes", "type": "checkbox", "context": "§8 lives with you #4: yes", "required": false },
+    { "page": 6, "id": "protected4_livesWith_no", "type": "checkbox", "context": "§8 lives with you #4: no", "required": false },
+
+    { "page": 6, "id": "protectedPeople_additionalSheet_checkbox", "type": "checkbox", "context": "extra sheet for more protected people", "required": false },
+
+    { "page": 6, "id": "protectedPeople_reason", "type": "text", "context": "§8(2) why they need protection", "required": false },
+
+    { "page": 6, "id": "firearms_dontknow", "type": "checkbox", "context": "§9 firearms: don't know", "required": false },
+    { "page": 6, "id": "firearms_no", "type": "checkbox", "context": "§9 firearms: no", "required": false },
+    { "page": 6, "id": "firearms_yes", "type": "checkbox", "context": "§9 firearms: yes", "required": false },
+
+    { "page": 6, "id": "firearm1_description", "type": "text", "context": "§9 firearm/parts/ammo row1 description", "required": false },
+    { "page": 6, "id": "firearm1_amount", "type": "text", "context": "§9 row1 amount/number", "required": false },
+    { "page": 6, "id": "firearm1_location", "type": "text", "context": "§9 row1 location (if known)", "required": false },
+
+    { "page": 6, "id": "firearm2_description", "type": "text", "context": "§9 row2 description", "required": false },
+    { "page": 6, "id": "firearm2_amount", "type": "text", "context": "§9 row2 amount", "required": false },
+    { "page": 6, "id": "firearm2_location", "type": "text", "context": "§9 row2 location", "required": false },
+
+    { "page": 6, "id": "firearm3_description", "type": "text", "context": "§9 row3 description", "required": false },
+    { "page": 6, "id": "firearm3_amount", "type": "text", "context": "§9 row3 amount", "required": false },
+    { "page": 6, "id": "firearm3_location", "type": "text", "context": "§9 row3 location", "required": false },
+
+    { "page": 6, "id": "firearm4_description", "type": "text", "context": "§9 row4 description", "required": false },
+    { "page": 6, "id": "firearm4_amount", "type": "text", "context": "§9 row4 amount", "required": false },
+    { "page": 6, "id": "firearm4_location", "type": "text", "context": "§9 row4 location", "required": false },
+
+    { "page": 6, "id": "firearm5_description", "type": "text", "context": "§9 row5 description", "required": false },
+    { "page": 6, "id": "firearm5_amount", "type": "text", "context": "§9 row5 amount", "required": false },
+    { "page": 6, "id": "firearm5_location", "type": "text", "context": "§9 row5 location", "required": false },
+
+    { "page": 6, "id": "firearm6_description", "type": "text", "context": "§9 row6 description", "required": false },
+    { "page": 6, "id": "firearm6_amount", "type": "text", "context": "§9 row6 amount", "required": false },
+    { "page": 6, "id": "firearm6_location", "type": "text", "context": "§9 row6 location", "required": false },
+
+    { "page": 7, "id": "caseNumber#6", "type": "text", "context": "page header case number (auto)", "required": false, "auto": true },
+
+    { "page": 7, "id": "order_noAbuse_checkbox", "type": "checkbox", "context": "§10 order to not abuse", "required": false },
+    { "page": 7, "id": "order_noContact_checkbox", "type": "checkbox", "context": "§11 no-contact order", "required": false },
+
+    { "page": 7, "id": "order_stayAway", "type": "checkbox", "context": "§12 stay-away orders overall", "required": false },
+    { "page": 7, "id": "order_stayAway_me", "type": "checkbox", "context": "§12a stay away from me", "required": false },
+    { "page": 7, "id": "order_stayAway_home", "type": "checkbox", "context": "§12a stay away from home", "required": false },
+    { "page": 7, "id": "order_stayAway_job", "type": "checkbox", "context": "§12a stay away from job/workplace", "required": false },
+    { "page": 7, "id": "order_stayAway_vehicle", "type": "checkbox", "context": "§12a stay away from vehicle", "required": false },
+    { "page": 7, "id": "order_stayAway_school", "type": "checkbox", "context": "§12a stay away from school", "required": false },
+    { "page": 7, "id": "order_stayAway_eachPersonIn8", "type": "checkbox", "context": "§12a stay away from each person in §8", "required": false },
+    { "page": 7, "id": "order_stayAway_childrenSchool", "type": "checkbox", "context": "§12a stay away from children's school/childcare", "required": false },
+    { "page": 7, "id": "order_stayAway_other", "type": "checkbox", "context": "§12a stay away from other places", "required": false },
+    { "page": 7, "id": "order_stayAway_other_description", "type": "text", "context": "§12a other places description", "required": false },
+
+    { "page": 7, "id": "order_stayAway_distance_100", "type": "checkbox", "context": "§12b distance 100 yards", "required": false },
+    { "page": 7, "id": "order_stayAway_distance_other", "type": "checkbox", "context": "§12b distance other", "required": false },
+    { "page": 7, "id": "order_stayAway_distance_other_yards", "type": "text", "context": "§12b other distance yards", "required": false },
+
+    { "page": 7, "id": "order_living_no", "type": "checkbox", "context": "§12c live together/close? no", "required": false },
+    { "page": 7, "id": "order_living_yes", "type": "checkbox", "context": "§12c live together/close? yes", "required": false },
+
+    { "page": 7, "id": "order_living_together", "type": "checkbox", "context": "§12c live together", "required": false },
+    { "page": 7, "id": "order_living_sameBuilding", "type": "checkbox", "context": "§12c same building", "required": false },
+    { "page": 7, "id": "order_living_sameNeighborhood", "type": "checkbox", "context": "§12c same neighborhood", "required": false },
+    { "page": 7, "id": "order_living_other", "type": "checkbox", "context": "§12c other explanation", "required": false },
+    { "page": 7, "id": "order_living_other_description", "type": "text", "context": "§12c other explanation text", "required": false },
+
+    { "page": 7, "id": "order_sameWorkSchool_no", "type": "checkbox", "context": "§12d same workplace/school? no", "required": false },
+    { "page": 7, "id": "order_sameWorkSchool_yes", "type": "checkbox", "context": "§12d same workplace/school? yes", "required": false },
+    { "page": 7, "id": "order_sameWorkSchool_work", "type": "checkbox", "context": "§12d work together box", "required": false },
+    { "page": 7, "id": "order_sameWorkSchool_work_name", "type": "text", "context": "§12d company name", "required": false },
+    { "page": 7, "id": "order_sameWorkSchool_school", "type": "checkbox", "context": "§12d same school box", "required": false },
+    { "page": 7, "id": "order_sameWorkSchool_school_name", "type": "text", "context": "§12d school name", "required": false },
+    { "page": 7, "id": "order_sameWorkSchool_other", "type": "checkbox", "context": "§12d other overlap", "required": false },
+    { "page": 7, "id": "order_sameWorkSchool_other_description", "type": "text", "context": "§12d other overlap description", "required": false },
+
+    { "page": 8, "id": "caseNumber#7", "type": "text", "context": "page header case number (auto)", "required": false, "auto": true },
+
+    { "page": 8, "id": "order_moveout_address_checkbox", "type": "checkbox", "context": "§13 move-out request box", "required": false },
+    { "page": 8, "id": "order_moveout_address", "type": "text", "context": "§13 address for move-out", "required": false },
+
+    { "page": 8, "id": "order_moveout_rights_own", "type": "checkbox", "context": "§13b I own the home", "required": false },
+    { "page": 8, "id": "order_moveout_rights_lease", "type": "checkbox", "context": "§13b name on the lease", "required": false },
+    { "page": 8, "id": "order_moveout_rights_liveWithKids", "type": "checkbox", "context": "§13b live here with child(ren)", "required": false },
+    { "page": 8, "id": "order_moveout_rights_livedHere", "type": "checkbox", "context": "§13b I have lived here", "required": false },
+    { "page": 8, "id": "order_moveout_rights_livedHere_years", "type": "number", "context": "§13b lived here years", "required": false },
+    { "page": 8, "id": "order_moveout_rights_livedHere_months", "type": "number", "context": "§13b lived here months", "required": false },
+    { "page": 8, "id": "order_moveout_rights_payRent", "type": "checkbox", "context": "§13b I pay rent/mortgage", "required": false },
+    { "page": 8, "id": "order_moveout_rights_other", "type": "checkbox", "context": "§13b other reason", "required": false },
+    { "page": 8, "id": "order_moveout_rights_other_description1", "type": "text", "context": "§13b other reason line 1", "required": false },
+    { "page": 8, "id": "order_moveout_rights_other_description2", "type": "text", "context": "§13b other reason line 2", "required": false },
+
+    { "page": 8, "id": "order_other_description_checkbox", "type": "checkbox", "context": "§14 other orders box", "required": false },
+    { "page": 8, "id": "order_other_description", "type": "text", "context": "§14 describe other orders requested", "required": false },
+
+    { "page": 8, "id": "order_childCustody_checkbox", "type": "checkbox", "context": "§15 custody/visitation request (triggers DV-105)", "required": false },
+
+    { "page": 9, "id": "caseNumber#8", "type": "text", "context": "page header case number (auto)", "required": false, "auto": true },
+
+    { "page": 9, "id": "protect_animals_checkbox", "type": "checkbox", "context": "§16 protect animals", "required": false },
+
+    { "page": 9, "id": "animal1_name", "type": "text", "context": "§16 animal row1 name/ID", "required": false },
+    { "page": 9, "id": "animal1_type", "type": "text", "context": "§16 animal row1 type", "required": false },
+    { "page": 9, "id": "animal1_breed", "type": "text", "context": "§16 animal row1 breed", "required": false },
+    { "page": 9, "id": "animal1_color", "type": "text", "context": "§16 animal row1 color", "required": false },
+
+    { "page": 9, "id": "animal2_name", "type": "text", "context": "§16 animal row2 name/ID", "required": false },
+    { "page": 9, "id": "animal2_type", "type": "text", "context": "§16 animal row2 type", "required": false },
+    { "page": 9, "id": "animal2_breed", "type": "text", "context": "§16 animal row2 breed", "required": false },
+    { "page": 9, "id": "animal2_color", "type": "text", "context": "§16 animal row2 color", "required": false },
+
+    { "page": 9, "id": "animal3_name", "type": "text", "context": "§16 animal row3 name/ID", "required": false },
+    { "page": 9, "id": "animal3_type", "type": "text", "context": "§16 animal row3 type", "required": false },
+    { "page": 9, "id": "animal3_breed", "type": "text", "context": "§16 animal row3 breed", "required": false },
+    { "page": 9, "id": "animal3_color", "type": "text", "context": "§16 animal row3 color", "required": false },
+
+    { "page": 9, "id": "animal4_name", "type": "text", "context": "§16 animal row4 name/ID", "required": false },
+    { "page": 9, "id": "animal4_type", "type": "text", "context": "§16 animal row4 type", "required": false },
+    { "page": 9, "id": "animal4_breed", "type": "text", "context": "§16 animal row4 breed", "required": false },
+    { "page": 9, "id": "animal4_color", "type": "text", "context": "§16 animal row4 color", "required": false },
+
+    { "page": 9, "id": "animal_order_stayAway_checkbox", "type": "checkbox", "context": "§16(b)(1) animal stay-away order", "required": false },
+    { "page": 9, "id": "animal_order_stayAway_100", "type": "checkbox", "context": "§16(b)(1) 100 yards", "required": false },
+    { "page": 9, "id": "animal_order_stayAway_other", "type": "checkbox", "context": "§16(b)(1) other distance", "required": false },
+    { "page": 9, "id": "animal_order_stayAway_other_yards", "type": "text", "context": "§16(b)(1) other yards", "required": false },
+
+    { "page": 9, "id": "animal_order_noHarm_checkbox", "type": "checkbox", "context": "§16(b)(2) no harm/take/sell/etc. to animals", "required": false },
+
+    { "page": 9, "id": "animal_order_possession_checkbox", "type": "checkbox", "context": "§16(b)(3) give sole possession/care/control", "required": false },
+    { "page": 9, "id": "animal_reason_abuse_checkbox", "type": "checkbox", "context": "§16(b)(3) reason: respondent abuses animals", "required": false },
+    { "page": 9, "id": "animal_reason_caretaker_checkbox", "type": "checkbox", "context": "§16(b)(3) reason: you are caretaker", "required": false },
+    { "page": 9, "id": "animal_reason_purchased_checkbox", "type": "checkbox", "context": "§16(b)(3) reason: you purchased animals", "required": false },
+    { "page": 9, "id": "animal_reason_other_checkbox", "type": "checkbox", "context": "§16(b)(3) reason: other", "required": false },
+    { "page": 9, "id": "animal_reason_other_description1", "type": "text", "context": "§16(b)(3) other reason text line 1", "required": false },
+    { "page": 9, "id": "animal_reason_other_description2", "type": "text", "context": "§16(b)(3) other reason text line 2", "required": false },
+
+    { "page": 9, "id": "control_of_property_checkbox", "type": "checkbox", "context": "§17 control of property requested", "required": false },
+
+    { "page": 9, "id": "property_request_description", "type": "text", "context": "§17(a) property description", "required": false },
+    { "page": 9, "id": "property_request_reason", "type": "text", "context": "§17(b) why control is requested", "required": false },
+
+    { "page": 9, "id": "order_healthInsurance_checkbox", "type": "checkbox", "context": "§18 don’t change insurance", "required": false },
+    { "page": 9, "id": "order_recordCommunications_checkbox", "type": "checkbox", "context": "§19 allow recording violations", "required": false },
+
+    { "page": 10, "id": "caseNumber#9", "type": "text", "context": "page header case number (auto)", "required": false, "auto": true },
+
+    { "page": 10, "id": "order_propertyRestraint_checkbox", "type": "checkbox", "context": "§20 property restraint (married/registered)", "required": false },
+
+    { "page": 10, "id": "order_extendServe_reason_checkbox", "type": "checkbox", "context": "§21 extend time to serve", "required": false },
+    { "page": 10, "id": "order_extendServe_reason", "type": "text", "context": "§21 reason to extend service deadline", "required": false },
+
+    { "page": 10, "id": "pay_debts_checkbox", "type": "checkbox", "context": "§22 pay debts request", "required": false },
+
+    { "page": 10, "id": "debt1_payTo", "type": "text", "context": "§22(a)(1) pay to", "required": false },
+    { "page": 10, "id": "debt1_for", "type": "text", "context": "§22(a)(1) for (what)", "required": false },
+    { "page": 10, "id": "debt1_amount", "type": "text", "context": "§22(a)(1) amount", "required": false },
+    { "page": 10, "id": "debt1_dueDate", "type": "date", "context": "§22(a)(1) due date", "required": false },
+
+    { "page": 10, "id": "debt2_payTo", "type": "text", "context": "§22(a)(2) pay to", "required": false },
+    { "page": 10, "id": "debt2_for", "type": "text", "context": "§22(a)(2) for (what)", "required": false },
+    { "page": 10, "id": "debt2_amount", "type": "text", "context": "§22(a)(2) amount", "required": false },
+    { "page": 10, "id": "debt2_dueDate", "type": "date", "context": "§22(a)(2) due date", "required": false },
+
+    { "page": 10, "id": "debt3_payTo", "type": "text", "context": "§22(a)(3) pay to", "required": false },
+    { "page": 10, "id": "debt3_for", "type": "text", "context": "§22(a)(3) for (what)", "required": false },
+    { "page": 10, "id": "debt3_amount", "type": "text", "context": "§22(a)(3) amount", "required": false },
+    { "page": 10, "id": "debt3_dueDate", "type": "date", "context": "§22(a)(3) due date", "required": false },
+
+    { "page": 10, "id": "debt_reasonForRequest", "type": "text", "context": "§22(a) reason to have respondent pay debts", "required": false },
+
+    { "page": 10, "id": "debt_finding_no", "type": "checkbox", "context": "§22(b) special decision (finding): no", "required": false },
+    { "page": 10, "id": "debt_finding_yes", "type": "checkbox", "context": "§22(b) special decision (finding): yes", "required": false },
+
+    { "page": 10, "id": "debt_abuseLink_a1", "type": "checkbox", "context": "§22(b)(1) abuse-linked debts: a(1)", "required": false },
+    { "page": 10, "id": "debt_abuseLink_a2", "type": "checkbox", "context": "§22(b)(1) abuse-linked debts: a(2)", "required": false },
+    { "page": 10, "id": "debt_abuseLink_a3", "type": "checkbox", "context": "§22(b)(1) abuse-linked debts: a(3)", "required": false },
+
+    { "page": 10, "id": "debt_explainHowMade_no", "type": "checkbox", "context": "§22(b)(2) know how the debt was made: no", "required": false },
+    { "page": 10, "id": "debt_explainHowMade_yes", "type": "checkbox", "context": "§22(b)(2) know how the debt was made: yes", "required": false },
+    { "page": 10, "id": "debt_explainHowMade", "type": "text", "context": "§22(b)(2) explanation of how debt was made", "required": false },
+
+    { "page": 11, "id": "caseNumber#10", "type": "text", "context": "page header case number (auto)", "required": false, "auto": true },
+
+    { "page": 11, "id": "abuseExpense_checkbox", "type": "checkbox", "context": "§23 pay expenses caused by abuse", "required": false },
+
+    { "page": 11, "id": "abuseExpense1_payTo", "type": "text", "context": "§23 pay to #1", "required": false },
+    { "page": 11, "id": "abuseExpense1_for", "type": "text", "context": "§23 for what #1", "required": false },
+    { "page": 11, "id": "abuseExpense1_amount", "type": "text", "context": "§23 amount #1", "required": false },
+
+    { "page": 11, "id": "abuseExpense2_payTo", "type": "text", "context": "§23 pay to #2", "required": false },
+    { "page": 11, "id": "abuseExpense2_for", "type": "text", "context": "§23 for what #2", "required": false },
+    { "page": 11, "id": "abuseExpense2_amount", "type": "text", "context": "§23 amount #2", "required": false },
+
+    { "page": 11, "id": "abuseExpense3_payTo", "type": "text", "context": "§23 pay to #3", "required": false },
+    { "page": 11, "id": "abuseExpense3_for", "type": "text", "context": "§23 for what #3", "required": false },
+    { "page": 11, "id": "abuseExpense3_amount", "type": "text", "context": "§23 amount #3", "required": false },
+
+    { "page": 11, "id": "abuseExpense4_payTo", "type": "text", "context": "§23 pay to #4", "required": false },
+    { "page": 11, "id": "abuseExpense4_for", "type": "text", "context": "§23 for what #4", "required": false },
+    { "page": 11, "id": "abuseExpense4_amount", "type": "text", "context": "§23 amount #4", "required": false },
+
+    { "page": 11, "id": "childSupport_checkbox", "type": "checkbox", "context": "§24 child support section applies", "required": false },
+    { "page": 11, "id": "childSupport_a_noOrder_checkbox", "type": "checkbox", "context": "§24(a) no order; want one", "required": false },
+    { "page": 11, "id": "childSupport_b_changeOrder_checkbox", "type": "checkbox", "context": "§24(b) change existing order", "required": false },
+    { "page": 11, "id": "childSupport_c_welfare_checkbox", "type": "checkbox", "context": "§24(c) TANF/Welfare/CalWORKS", "required": false },
+
+    { "page": 11, "id": "spousalSupport_checkbox", "type": "checkbox", "context": "§25 spousal support request", "required": false },
+    { "page": 11, "id": "lawyerFees_checkbox", "type": "checkbox", "context": "§26 lawyer's fees and costs request", "required": false },
+
+    { "page": 12, "id": "caseNumber#11", "type": "text", "context": "page header case number (auto)", "required": false, "auto": true },
+
+    { "page": 12, "id": "battererIntervention_checkbox", "type": "checkbox", "context": "§27 batterer intervention program request", "required": false },
+
+    { "page": 12, "id": "transferPhone_checkbox", "type": "checkbox", "context": "§28 transfer wireless phone account", "required": false },
+
+    { "page": 12, "id": "transferPhone_a_mine_checkbox", "type": "checkbox", "context": "§28(a) my number (set)", "required": false },
+    { "page": 12, "id": "transferPhone_a_child_checkbox", "type": "checkbox", "context": "§28(a) child's number", "required": false },
+    { "page": 12, "id": "transferPhone_a_number", "type": "text", "context": "§28(a) phone number (me/child)", "required": false },
+
+    { "page": 12, "id": "transferPhone_b_mine_checkbox", "type": "checkbox", "context": "§28(b) my number", "required": false },
+    { "page": 12, "id": "transferPhone_b_child_checkbox", "type": "checkbox", "context": "§28(b) child's number", "required": false },
+    { "page": 12, "id": "transferPhone_b_number", "type": "text", "context": "§28(b) phone number", "required": false },
+
+    { "page": 12, "id": "transferPhone_c_mine_checkbox", "type": "checkbox", "context": "§28(c) my number", "required": false },
+    { "page": 12, "id": "transferPhone_c_child_checkbox", "type": "checkbox", "context": "§28(c) child's number", "required": false },
+    { "page": 12, "id": "transferPhone_c_number", "type": "text", "context": "§28(c) phone number", "required": false },
+
+    { "page": 12, "id": "transferPhone_d_mine_checkbox", "type": "checkbox", "context": "§28(d) my number", "required": false },
+    { "page": 12, "id": "transferPhone_d_child_checkbox", "type": "checkbox", "context": "§28(d) child's number", "required": false },
+    { "page": 12, "id": "transferPhone_d_number", "type": "text", "context": "§28(d) phone number", "required": false },
+
+    { "page": 13, "id": "caseNumber#12", "type": "text", "context": "page header case number (auto)", "required": false, "auto": true },
+
+    { "page": 13, "id": "additionalPages_count", "type": "number", "context": "§32 additional pages attached count", "required": false },
+
+    { "page": 13, "id": "petitionerSign_date", "type": "date", "context": "§33 your signature date", "required": true },
+    { "page": 13, "id": "petitionerSign_name", "type": "text", "context": "§33 type/print your name", "required": true },
+    { "page": 13, "id": "petitionerSign_signatureImg", "type": "text", "context": "§33 signature image (if capturing)", "required": false },
+
+    { "page": 13, "id": "lawyerSign_date", "type": "date", "context": "§34 lawyer signature date (if any)", "required": false },
+    { "page": 13, "id": "lawyerSign_name", "type": "text", "context": "§34 lawyer printed name (if any)", "required": false },
+    { "page": 13, "id": "lawyerSign_signatureImg", "type": "text", "context": "§34 lawyer signature image (if any)", "required": false }
+  ]
+}

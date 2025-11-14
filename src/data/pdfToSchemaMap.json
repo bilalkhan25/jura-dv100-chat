@@ -1,0 +1,14 @@
+{
+  "courtName": "court.courtName",
+  "caseNumber": "court.caseNumber",
+
+  "petitionerName": "protectedPerson.petitionerName",
+  "petitionerAge": "protectedPerson.petitionerAge",
+  "petitionerAddress": "protectedPerson.petitionerAddress",
+  "petitionerCity": "protectedPerson.petitionerCity",
+  "petitionerState": "protectedPerson.petitionerState",
+  "petitionerZip": "protectedPerson.petitionerZip",
+  "petitionerPhone": "protectedPerson.petitionerPhone",
+  "petitionerFax": "protectedPerson.petitionerFax",
+  "petitionerEmail": "protectedPerson.petitionerEmail"
+}
